@@ -1,35 +1,31 @@
+/* Estilo geral da página */
 body {
     margin: 0;
     padding: 0;
-    background: url('icons/wallpaper.jpg') no-repeat center center fixed;
+    background: url('icons/background.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
-    color: white;
 }
 
-.desktop {
+/* Container dos ícones no estilo desktop */
+.desktop-icons {
+    position: absolute;
+    top: 50px; /* Ajuste a posição vertical */
+    left: 50px; /* Ajuste a posição na esquerda */
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    height: 100vh;
-    padding: 20px;
+    flex-direction: column; /* Ícones enfileirados verticalmente */
+    gap: 20px; /* Espaço entre os ícones */
 }
 
-.icon {
-    width: 80px;
-    text-align: center;
-    margin: 15px;
+/* Estilização dos ícones */
+.desktop-icons img {
+    width: 80px; /* Tamanho do ícone */
+    height: auto;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
-.icon img {
-    width: 60px;
-    height: 60px;
+/* Efeito ao passar o mouse nos ícones */
+.desktop-icons img:hover {
+    transform: scale(1.1); /* Pequeno zoom */
 }
-
-.icon span {
-    display: block;
-    margin-top: 5px;
-    font-size: 14px;
-}
-
