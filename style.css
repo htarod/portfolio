@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('icons/background.jpg');
-background-size: contain; /* Mantém a proporção original da imagem */
+background-size: background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -22,7 +22,7 @@ background-attachment: fixed;
 
 /* Estilização dos ícones */
 .desktop-icons img {
-    width: 80px; /* Tamanho do ícone */
+    width: 70px; /* Tamanho do ícone */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
