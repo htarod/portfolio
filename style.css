@@ -2,23 +2,21 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('icons/background.jpg');
-background-size: background-size: background-size: 100% auto; 
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Caso a tela seja maior que 1920x1080, evita bordas brancas */
+    overflow: hidden; /* Evita rolagem */
 }
 
-/* Container dos ícones no estilo desktop */
-.icon-container {
-    position: fixed; /* Mantém os ícones fixos ao lado esquerdo */
-    left: 20px; /* Ajuste fino da posição na lateral esquerda */
-    top: 50%; /* Mantém os ícones centralizados verticalmente */
-    transform: translateY(-50%); /* Garante que fiquem centralizados */
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espaçamento entre os ícones */
+.container {
+    width: 1920px;
+    height: 1080px;
+    background: url('icons/background.jpg') no-repeat center center;
+    background-size: contain; /* Mantém o fundo exatamente do tamanho original */
+    position: relative;
 }
 
 /* Estilização dos ícones */
