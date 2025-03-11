@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('icons/background.jpg');
-background-size: background-size: cover;
+background-size: background-size: background-size: 100% auto; 
 background-position: center;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -11,13 +11,14 @@ background-attachment: fixed;
 }
 
 /* Container dos ícones no estilo desktop */
-.desktop-icons {
-    position: absolute;
-    top: 400px; /* Ajuste a posição vertical */
-    left: 50px; /* Ajuste a posição na esquerda */
+.icon-container {
+    position: fixed; /* Mantém os ícones fixos ao lado esquerdo */
+    left: 20px; /* Ajuste fino da posição na lateral esquerda */
+    top: 50%; /* Mantém os ícones centralizados verticalmente */
+    transform: translateY(-50%); /* Garante que fiquem centralizados */
     display: flex;
-    flex-direction: column; /* Ícones enfileirados verticalmente */
-    gap: 25px; /* Espaço entre os ícones */
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os ícones */
 }
 
 /* Estilização dos ícones */
