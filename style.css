@@ -17,6 +17,25 @@ body {
     position: relative;
 }
 
+#icon-bar {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
 
 .desktop-icons img {
     width: 70px; 
