@@ -1,37 +1,38 @@
-/* plano de fundo */
-body {
-  background-image: url('icons/background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+/* 1) Fundo cobrindo toda a tela */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+body {
+  background: url('icons/background.jpg') center center / cover no-repeat;
   font-family: 'Courier New', monospace;
   color: white;
+  overflow: hidden; /* remove qualquer scrollbar */
 }
 
-/* área de “desktop” onde ficam os ícones */
+/* 2) Desktop virtual */
 #desktop {
   position: absolute;
   top: 50px;
   left: 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px; /* aumenta o espaçamento vertical */
 }
 
-/* wrapper de cada ícone + legenda */
+/* 3) Cada ícone + legenda */
 .icon-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80px;
   text-align: center;
-  width: 70px;
 }
 
-/* estilo da imagem do ícone */
+/* 4) Imagem do ícone */
 .icon {
-  width: 50px;
+  width: 60px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -40,11 +41,13 @@ body {
   transform: scale(1.1);
 }
 
-/* legenda abaixo do ícone */
+/* 5) Legenda abaixo do ícone */
 .icon-wrapper span {
-  margin-top: 5px;
+  margin-top: 8px;
   font-size: 12px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2px 4px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 2px 6px;
   border-radius: 3px;
+  display: block;
+  white-space: nowrap;
 }
