@@ -1,4 +1,4 @@
-/* reset full viewport e esconde overflow */
+/* 1) Reset total e esconde overflow */
 html, body {
   height: 100%;
   margin: 0;
@@ -6,53 +6,50 @@ html, body {
   overflow: hidden;
 }
 
-/* cor de fundo para preencher barras se a imagem não ocupar tudo */
+/* 2) Cor de fundo + imagem centralizada sem cortes */
 body {
-  background-color: #30b5a5; /* ou a cor predominante da sua imagem */
+  background-color: #30b5a5;
   font-family: 'Courier New', monospace;
   color: white;
 }
-
-/* imagem de fundo em tela cheia, preservando toda a arte */
 .bg-img {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: contain;      /* mostra toda a imagem, sem cortar */
-  object-position: center;  /* centraliza a parte visível */
-  z-index: -1;              /* fica atrás dos ícones */
+  object-fit: contain;
+  object-position: center;
+  z-index: -1;
 }
 
-/* área dos ícones */
+/* 3) Área dos ícones, iniciando à esquerda (em linha com o Start) */
 #desktop {
   position: absolute;
   top: 50px;
-  left: 30px;
+  left: 8px;           /* alinha horizontalmente com o Start */
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;           /* distância entre os ícones */
 }
 
-/* remove sublinhado dos links de legenda */
+/* 4) Remove sublinhado das legendas */
 #desktop a {
   text-decoration: none;
   color: inherit;
 }
 
-/* wrapper de cada ícone + legenda */
+/* 5) Wrapper de cada ícone + legenda */
 .icon-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80px;
+  width: 60px;
   text-align: center;
 }
 
-/* ícones */
+/* 6) Ícones um pouco menores */
 .icon {
-  width: 60px;
+  width: 45px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
@@ -60,12 +57,12 @@ body {
   transform: scale(1.1);
 }
 
-/* legendas com sombra branca */
+/* 7) Legenda colada ao ícone */
 .icon-wrapper span {
-  margin-top: 8px;
-  font-size: 12px;
+  margin-top: 4px;     /* mais “grudadinho” */
+  font-size: 11px;
   background-color: rgba(0,0,0,0.5);
-  padding: 2px 6px;
+  padding: 2px 4px;
   border-radius: 3px;
   display: block;
   white-space: nowrap;
