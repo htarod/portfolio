@@ -8,7 +8,7 @@ html, body {
 
 /* 2) Cor de fundo + imagem centralizada sem cortes */
 body {
-  background-color: #2c2d2e;
+  background-color: #ffffff;
   font-family: 'Courier New', monospace;
   color: white;
 }
@@ -26,7 +26,7 @@ body {
 #desktop {
   position: absolute;
   top: 50px;
-  left: 128px;           /* alinha horizontalmente com o Start */
+  left: 148px;           /* alinha horizontalmente com o Start */
   display: flex;
   flex-direction: column;
   gap: 20px;           /* distância entre os ícones */
