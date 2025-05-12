@@ -1,27 +1,29 @@
-/* 1) Fundo cobrindo toda a tela */
+/* 1) Força html e body a ocupar 100% e esconde overflow */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
+
+/* 2) Fundo cobrindo toda a tela */
 body {
   background: url('icons/background.jpg') center center / cover no-repeat;
   font-family: 'Courier New', monospace;
   color: white;
-  overflow: hidden; /* remove qualquer scrollbar */
 }
 
-/* 2) Desktop virtual */
+/* 3) Desktop virtual com ícones em coluna */
 #desktop {
   position: absolute;
   top: 50px;
   left: 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px; /* aumenta o espaçamento vertical */
+  gap: 30px;
 }
 
-/* 3) Cada ícone + legenda */
+/* 4) Wrapper de cada ícone + legenda */
 .icon-wrapper {
   display: flex;
   flex-direction: column;
@@ -30,10 +32,9 @@ body {
   text-align: center;
 }
 
-/* 4) Imagem do ícone */
+/* 5) Imagem do ícone */
 .icon {
   width: 60px;
-  height: auto;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
@@ -41,7 +42,7 @@ body {
   transform: scale(1.1);
 }
 
-/* 5) Legenda abaixo do ícone */
+/* 6) Legenda abaixo do ícone, com sombra branca */
 .icon-wrapper span {
   margin-top: 8px;
   font-size: 12px;
@@ -50,4 +51,5 @@ body {
   border-radius: 3px;
   display: block;
   white-space: nowrap;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
