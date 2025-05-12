@@ -26,7 +26,7 @@ body {
 #desktop {
   position: absolute;
   top: 50px;
-  left: 38px;           /* alinha horizontalmente com o Start */
+  left: 68px;           /* alinha horizontalmente com o Start */
   display: flex;
   flex-direction: column;
   gap: 20px;           /* distância entre os ícones */
