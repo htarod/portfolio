@@ -1,3 +1,4 @@
+/* reset full viewport e esconde overflow */
 html, body {
   height: 100%;
   margin: 0;
@@ -5,27 +6,42 @@ html, body {
   overflow: hidden;
 }
 
+/* cor de fundo para preencher barras se a imagem não ocupar tudo */
 body {
-  background: url('icons/background.jpg') center center / cover no-repeat;
+  background-color: #30b5a5; /* ou a cor predominante da sua imagem */
   font-family: 'Courier New', monospace;
   color: white;
 }
 
+/* imagem de fundo em tela cheia, preservando toda a arte */
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;      /* mostra toda a imagem, sem cortar */
+  object-position: center;  /* centraliza a parte visível */
+  z-index: -1;              /* fica atrás dos ícones */
+}
+
+/* área dos ícones */
 #desktop {
   position: absolute;
   top: 50px;
   left: 30px;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* espaçamento aumentado */
+  gap: 40px;
 }
 
-/* remove sublinhado das legendas */
+/* remove sublinhado dos links de legenda */
 #desktop a {
   text-decoration: none;
   color: inherit;
 }
 
+/* wrapper de cada ícone + legenda */
 .icon-wrapper {
   display: flex;
   flex-direction: column;
@@ -34,6 +50,7 @@ body {
   text-align: center;
 }
 
+/* ícones */
 .icon {
   width: 60px;
   cursor: pointer;
@@ -43,6 +60,7 @@ body {
   transform: scale(1.1);
 }
 
+/* legendas com sombra branca */
 .icon-wrapper span {
   margin-top: 8px;
   font-size: 12px;
