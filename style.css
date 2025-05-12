@@ -1,4 +1,3 @@
-/* 1) Força html e body a ocupar 100% e esconde overflow */
 html, body {
   height: 100%;
   margin: 0;
@@ -6,24 +5,27 @@ html, body {
   overflow: hidden;
 }
 
-/* 2) Fundo cobrindo toda a tela */
 body {
   background: url('icons/background.jpg') center center / cover no-repeat;
   font-family: 'Courier New', monospace;
   color: white;
 }
 
-/* 3) Desktop virtual com ícones em coluna */
 #desktop {
   position: absolute;
   top: 50px;
   left: 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px; /* espaçamento aumentado */
 }
 
-/* 4) Wrapper de cada ícone + legenda */
+/* remove sublinhado das legendas */
+#desktop a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .icon-wrapper {
   display: flex;
   flex-direction: column;
@@ -32,7 +34,6 @@ body {
   text-align: center;
 }
 
-/* 5) Imagem do ícone */
 .icon {
   width: 60px;
   cursor: pointer;
@@ -42,7 +43,6 @@ body {
   transform: scale(1.1);
 }
 
-/* 6) Legenda abaixo do ícone, com sombra branca */
 .icon-wrapper span {
   margin-top: 8px;
   font-size: 12px;
